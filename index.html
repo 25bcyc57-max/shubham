@@ -1,10 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Website</title>
+  <title>Shubham's Website</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      padding: 10px;
+      width: 80%;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px;
+      margin-top: 10px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello Shubham 🚀</h1>
-  <p>Your website is LIVE!</p>
+
+  <h1>Welcome to My Website 🚀</h1>
+
+  <div class="box">
+    <h2>👤 Shubham</h2>
+    <p>Student | Web Developer</p>
+    <p>📞 Contact: 9876543210</p>
+
+    <hr>
+
+    <h3>Enter Your Name:</h3>
+    <input type="text" id="nameInput" placeholder="Type here...">
+    <br>
+    <button onclick="showData()">Submit</button>
+
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function showData() {
+      var name = document.getElementById("nameInput").value;
+      document.getElementById("output").innerHTML = 
+        "Hello " + name + "! Welcome to my website 🎉";
+    }
+  </script>
+
 </body>
 </html>
